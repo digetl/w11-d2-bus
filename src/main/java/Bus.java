@@ -40,4 +40,3 @@ public class Bus {
         this.passengers.remove(person);
     }
 }
-
