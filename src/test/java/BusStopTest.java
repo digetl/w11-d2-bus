@@ -17,4 +17,12 @@ public class BusStopTest {
     public void busstopHasName() {
         assertEquals("Lothian Road", busstop.getBusStopName());
     }
+
+    @Test
+    public void BusStopIsEmpty() {
+        assertEquals(0, busstop.lengthOfQueue());
+    }
+
+    @Test
+    public void AddPassengertoQueue()
 }

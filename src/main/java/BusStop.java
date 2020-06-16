@@ -7,11 +7,15 @@ public class BusStop {
 
     public BusStop(String name){
         this.name = name;
-
+        this.queue = new ArrayList<Person>();
     }
 
 
     public String getBusStopName() {
         return this.name;
+    }
+
+    public int lengthOfQueue() {
+        return this.queue.size();
     }
 }
