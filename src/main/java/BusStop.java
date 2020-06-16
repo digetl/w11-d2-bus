@@ -18,4 +18,8 @@ public class BusStop {
     public int lengthOfQueue() {
         return this.queue.size();
     }
+
+    public void addPassengerToQueue(Person person) {
+        this.queue.add(person);
+    }
 }

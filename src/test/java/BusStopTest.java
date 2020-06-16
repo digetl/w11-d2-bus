@@ -24,5 +24,9 @@ public class BusStopTest {
     }
 
     @Test
-    public void AddPassengertoQueue()
+    public void AddPassengerToQueue() {
+        busstop.addPassengerToQueue(person);
+        assertEquals(1, busstop.lengthOfQueue());
+    }
+
 }
