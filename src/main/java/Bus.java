@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Queue;
 
 public class Bus {
 
@@ -30,9 +31,16 @@ public class Bus {
         return this.passengers.size();
     }
 
-    public void addPassenger(Person person) {
+//    public void addPassenger(Person person) {
+//        if (numberOfPassengers() < this.capacity ){
+//            this.passengers.add(person);
+//        }
+//    }
+
+    public void addPassenger(BusStop busstop) {
         if (numberOfPassengers() < this.capacity ){
-            this.passengers.add(person);
+            Person personRemoved = busstop.removePassengerFromTheQueue();
+            this.passengers.add(personRemoved);
         }
     }
 

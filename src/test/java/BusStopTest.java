@@ -11,6 +11,7 @@ public class BusStopTest {
     @Before
     public void before() {
         busstop = new BusStop("Lothian Road");
+        person = new Person();
     }
 
     @Test
@@ -30,10 +31,11 @@ public class BusStopTest {
     }
 
     @Test
-    public void removePassengerFromQueue() {
+    public Person removePassengerFromQueue() {
         busstop.addPassengerToQueue(person);
-        busstop.removePassengerFromTheQueue(person);
+        Person personRemoved = busstop.removePassengerFromTheQueue();
         assertEquals(0, busstop.lengthOfQueue());
+        return personRemoved;
     }
 
 }
